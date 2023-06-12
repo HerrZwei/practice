@@ -1,7 +1,7 @@
 <!--
  * @Author: spOmwenda
  * @Date: 2023-06-12 11:35:24
- * @LastEditTime: 2023-06-12 19:39:24
+ * @LastEditTime: 2023-06-12 20:36:25
  * @LastEditors: spOmwenda
  * @Description: desc
  * @FilePath: /practice/src/App.vue
@@ -9,13 +9,15 @@
 
 
 <template>
+  <ToolBar />
   <div class="main">
     <Editor />
   </div>
 </template>
 
 <script setup lang="ts">
-import  Editor from "@/components/Editor/index.vue"
+import  Editor from "@/components/Editor/index.vue";
+import ToolBar from "./components/ToolBar.vue";
 </script>
 
 <style lang="less" scoped>
@@ -46,9 +48,9 @@ html {
 }
 
 .main {
-  width: 80%;
+  width: 85%;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 </style>
 

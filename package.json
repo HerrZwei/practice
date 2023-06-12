@@ -13,6 +13,8 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "@vueuse/core": "^10.1.2",
     "element-plus": "^2.3.6",
     "monaco-editor": "^0.39.0",
     "pinia": "^2.0.36",
