@@ -1,7 +1,7 @@
 /*
  * @Author: spOmwenda
  * @Date: 2023-06-12 11:35:24
- * @LastEditTime: 2023-06-12 14:17:13
+ * @LastEditTime: 2023-06-12 14:37:26
  * @LastEditors: spOmwenda
  * @Description: desc
  * @FilePath: /practice/.eslintrc.cjs
@@ -22,7 +22,7 @@ module.exports = {
   },
   rules: {
     "vue/multi-word-component-names": ["error", {
-      ignores: ["Editor"],
+      ignores: ["index"],
     }],
   },
 }

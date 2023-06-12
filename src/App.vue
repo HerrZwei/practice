@@ -1,7 +1,7 @@
 <!--
  * @Author: spOmwenda
  * @Date: 2023-06-12 11:35:24
- * @LastEditTime: 2023-06-12 14:03:48
+ * @LastEditTime: 2023-06-12 19:39:24
  * @LastEditors: spOmwenda
  * @Description: desc
  * @FilePath: /practice/src/App.vue
@@ -9,38 +9,51 @@
 
 
 <template>
-  <Editor />
+  <div class="main">
+    <Editor />
+  </div>
 </template>
 
 <script setup lang="ts">
-import  Editor from "@/components/Editor.vue"
+import  Editor from "@/components/Editor/index.vue"
 </script>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+<style lang="less" scoped>
+@keyframes test {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+  100% {
+    opacity: 0;
+    transform: translateY(0px);
   }
 }
+
+body,
+html {
+  height: 100%;
+  transition: all 0.2s;
+}
+
+.test {
+  animation: test 2s ease-in-out forwards;
+}
+
+.container {
+  width: 100%;
+}
+
+.main {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+}
+</style>
+
+<style>
+/* @import 'element-plus/dist/index.css'; */
+@import "@/global.less";
+/* @import 'nprogress/nprogress.css'; */
 </style>
