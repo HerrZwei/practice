@@ -1,7 +1,7 @@
 <!--
  * @Author: spOmwenda
  * @Date: 2023-06-12 15:01:53
- * @LastEditTime: 2023-06-12 19:37:32
+ * @LastEditTime: 2023-06-12 19:41:02
  * @LastEditors: spOmwenda
  * @Description: desc
  * @FilePath: /practice/src/components/Editor/index.vue
@@ -63,7 +63,7 @@
 <script lang="ts" setup>
 import type { Monaco } from '@monaco-editor/loader';
 import { editor as EditorType } from 'monaco-editor/esm/vs/editor/editor.api';
-import { ref, computed, watch, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import useBoolean from "@/composables/useBoolean";
 //   import { useBgState } from "@/composables/state";
 //   import { getCodeList } from '~~/api/code';
@@ -188,26 +188,26 @@ const handleLanguageM = (v: string) => {
 // theme
 // const bgState = useBgState();
 const theme = "dark"; // computed(() => bgState.value === "SUN" ? 'light' : 'dark');
-const themeOptions = [
-  {
-    key: 'light',
-    label: '明亮',
-    value: 'light'
-  },
-  {
-    key: 'dark',
-    label: '暗黑',
-    value: 'dark'
-  },
-];
+// const themeOptions = [
+//   {
+//     key: 'light',
+//     label: '明亮',
+//     value: 'light'
+//   },
+//   {
+//     key: 'dark',
+//     label: '暗黑',
+//     value: 'dark'
+//   },
+// ];
 // watch(theme, (nv) => {
 //   handleTheme(nv);
 // });
 
 // 处理编辑器主题改遍
-const handleTheme = (v: "light" | "dark") => {
-  monaco.value?.editor.setTheme(`vs-${v}`);
-}
+// const handleTheme = (v: "light" | "dark") => {
+//   monaco.value?.editor.setTheme(`vs-${v}`);
+// }
 
 // 处理比对逻辑
 const handleDiff = async () => {
